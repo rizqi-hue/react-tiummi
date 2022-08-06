@@ -1,9 +1,6 @@
 import {
-  Datagrid,
-  TextField,
-  DateField,
-  Identifier,
-  BulkDeleteButton,
+  BulkDeleteButton, Datagrid, DateField,
+  Identifier, TextField
 } from "react-admin";
 
 import rowStyle from './rowStyle';

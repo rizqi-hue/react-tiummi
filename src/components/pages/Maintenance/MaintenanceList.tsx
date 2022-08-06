@@ -1,12 +1,7 @@
-import { useMediaQuery, Theme } from "@mui/material";
+import { Theme, useMediaQuery } from "@mui/material";
 import {
-  List,
-  Datagrid,
-  TextField,
-  DateField,
-  BooleanInput,
+  Datagrid, DateField, List, TextField
 } from "react-admin";
-import StatusInputPeminjaman from "./StatusInputPeminjaman";
 
 export default function MaintenanceList(props: any) {
   const isXsmall = useMediaQuery<Theme>((theme) =>

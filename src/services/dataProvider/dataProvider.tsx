@@ -1,6 +1,6 @@
+import simpleRestProvider from "ra-data-simple-rest";
 import { DataProvider } from "react-admin";
 import addUploadFeature from "./addUploadFeature";
-import simpleRestProvider from "ra-data-simple-rest";
 
 import api from "../axios";
 

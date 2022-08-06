@@ -1,44 +1,41 @@
-import { Admin, CustomRoutes, Resource } from "react-admin";
 import polyglotI18nProvider from "ra-i18n-polyglot";
+import { Admin, Resource } from "react-admin";
 import englishMessages from "./i18n/en";
 
 import { Layout, Login } from "./components/layouts";
-import { Dashboard } from "./components/pages/dashboard";
 import { lightTheme } from "./components/layouts/themes";
+import { Dashboard } from "./components/pages/dashboard";
 
 // pages
-import visitors from "./components/pages/visitors";
-import user from "./components/pages/user";
-import mahasiswa from "./components/pages/mahasiswa";
-import dosen from "./components/pages/dosen";
-import kelas from "./components/pages/kelas";
-import jurusan from "./components/pages/jurusan";
-import tempatikelas from "./components/pages/tempatikelas";
-import soal from "./components/pages/soal";
 import asisten from "./components/pages/asisten";
-import matakul from "./components/pages/matakul";
+import dosen from "./components/pages/dosen";
+import hasilsurvei from "./components/pages/hasilsurvei";
 import inventori from "./components/pages/inventori";
-import peminjaman from "./components/pages/peminjaman";
-import peminjamanmahasiswa from "./components/pages/peminjamanmahasiswa";
+import jadwal from "./components/pages/jadwal";
+import jurusan from "./components/pages/jurusan";
+import kelas from "./components/pages/kelas";
+import lihatjadwal from "./components/pages/lihatjadwal";
+import mahasiswa from "./components/pages/mahasiswa";
+import maintenance from "./components/pages/Maintenance";
+import matakul from "./components/pages/matakul";
 import materi from "./components/pages/materi";
 import materimahasiswa from "./components/pages/materimahasiswa";
+import peminjaman from "./components/pages/peminjaman";
+import peminjamanmahasiswa from "./components/pages/peminjamanmahasiswa";
+import pengajuan from "./components/pages/pengajuan";
+import pinjamruangan from "./components/pages/pinjamruangan";
 import profile from "./components/pages/profile";
 import profilemahasiswa from "./components/pages/profile_mahasiswa";
-import pengajuan from "./components/pages/pengajuan";
 import ruangan from "./components/pages/ruangan";
-import pinjamruangan from "./components/pages/pinjamruangan";
-import pinjamruanganmahasiswa from "./components/pages/pinjamruanganmahasiswa";
-import jadwal from "./components/pages/jadwal";
+import soal from "./components/pages/soal";
 import survei from "./components/pages/survei";
-import maintenance from "./components/pages/Maintenance";
-import hasilsurvei from "./components/pages/hasilsurvei";
-import lihatjadwal from "./components/pages/lihatjadwal";
+import tempatikelas from "./components/pages/tempatikelas";
+import user from "./components/pages/user";
+import visitors from "./components/pages/visitors";
 
 //provider
-import dataProvider from "./services/dataProvider/dataProvider";
 import authProvider from "./services/authProvider";
-import { Route } from "react-router";
-import InventoriCetak from "./components/pages/inventori/InventoriCetak";
+import dataProvider from "./services/dataProvider/dataProvider";
 
 const i18nProvider = polyglotI18nProvider((locale) => {
   if (locale === "fr") {

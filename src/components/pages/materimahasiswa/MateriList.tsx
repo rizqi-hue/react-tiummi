@@ -1,28 +1,7 @@
-import { Chip, useMediaQuery, Theme, Box } from "@mui/material";
+import { Theme, useMediaQuery } from "@mui/material";
 import {
-  ListBase,
-  Pagination,
-  Title,
-  SortButton,
-  TopToolbar,
-  CreateButton,
-  ExportButton,
-  FilterButton,
-  FilterContext,
-  FilterForm,
-  SearchInput,
-  NumberInput,
-  ReferenceInput,
-  SelectInput,
-  useTranslate,
-  InputProps,
-  Datagrid,
-  TextField,
-  DateField,
-  List,
+  Datagrid, List, TextField
 } from "react-admin";
-import Aside from "./Aside";
-import ImageList from "./GridList";
 
 export default function MateriList(props: any) {
   const isXsmall = useMediaQuery<Theme>((theme) =>

@@ -1,7 +1,6 @@
-import { Card, CardMedia } from "@mui/material";
+import { Card } from "@mui/material";
 import { useRecordContext } from "react-admin";
 import { Inventori } from "../../../services/types";
-import PdfPreview from "./PdfPreview";
 
 const Poster = () => {
   const record = useRecordContext<Inventori>();

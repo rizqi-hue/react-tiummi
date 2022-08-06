@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import api from "../../../services/axios";
 import HasilSurvei from "../hasilsurvei/HasilSurvei";
 import CardCounter from "./CardCounter";
+import JadwalList from "./LihatJadwalList";
 import Welcome from "./Welcome";
 
 const Dashboard = () => {
@@ -32,9 +33,11 @@ const Dashboard = () => {
 
   return (
     <div className="p-4">
-      <Welcome />
-      <div className="items-center justify-center">
-        <div className="grid grid-cols-2 gap-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-4 xl:grid-cols-4">
+      <div className="hidden md:block">
+        <Welcome />
+      </div>
+      <div className="items-center justify-center mt-5">
+        <div className="grid grid-cols-1 gap-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2">
           <CardCounter
             counter={dataCounter.total_mahasiswa}
             title="Jumlah Mahasiswa"
@@ -61,11 +64,11 @@ const Dashboard = () => {
             link="/peminjaman"
           />
         </div>
-        <div className="w-full h-80 flex flex-col md:flex-row justify-between mt-5">
-          <div className="w-full w-max-md md:max-w-xl h-80 mr-5 bg-white p-1 rounded-md shadow">
-            <HasilSurvei />
-          </div>
+        <div className="mt-10"></div>
 
+        <HasilSurvei />
+
+        <div className="w-full h-80 flex flex-col md:flex-row justify-between mt-5">
           <div className="w-full h-80">
             {/* <HasilSurvei /> */}
             <div className="w-full gap-x-20 text-gray-500">
@@ -98,7 +101,9 @@ const Dashboard = () => {
                                 <div className="font-bold text-xl leading-none">
                                   {value.jumlah}
                                 </div>
-                                <div className="mt-1 text-xs">{value.kategori}</div>
+                                <div className="mt-1 text-xs">
+                                  {value.kategori}
+                                </div>
                               </div>
                             );
                           }

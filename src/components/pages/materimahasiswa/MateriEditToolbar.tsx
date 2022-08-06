@@ -1,17 +1,11 @@
-import { useCallback } from "react";
 import {
-  Toolbar,
   DeleteButton,
-  SaveButton,
-  ToolbarProps,
-  useRecordContext,
-  useNotify,
-  useRedirect,
+  SaveButton, Toolbar, ToolbarProps, useNotify, useRecordContext, useRedirect
 } from "react-admin";
 
 // import { Print } from "@mui/icons-material";
-import { Inventori } from "../../../services/types";
 import { useNavigate } from "react-router-dom";
+import { Inventori } from "../../../services/types";
 
 const MateriEditToolbar = (props: ToolbarProps<Inventori>) => {
   const { resource } = props;

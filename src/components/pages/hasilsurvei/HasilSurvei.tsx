@@ -12,9 +12,5 @@ export default function HasilSurvei(props: any) {
     });
   }, []);
 
-  return (
-    <>
-      <SurveyBarVertical api={cart} />
-    </>
-  );
+  return <SurveyBarVertical api={cart} />;
 }

@@ -11,22 +11,13 @@ import {
 
 import {
   useTranslate,
-  SelectInput,
   Edit,
   DateInput,
   ReferenceInput,
   TabbedForm,
   FormTab,
-  ArrayInput,
-  SimpleFormIterator,
   AutocompleteInput,
-  NumberInput,
   TextInput,
-  ReferenceManyField,
-  Pagination,
-  Datagrid,
-  TextField,
-  DateField,
   useRecordContext,
   useGetManyReference,
 } from "react-admin";

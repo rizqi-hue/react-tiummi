@@ -1,7 +1,7 @@
+import { Block, Done, Timer } from "@mui/icons-material";
 import { Chip } from "@mui/material";
 import { useRecordContext } from "react-admin";
 import { Peminjaman } from "../../../services/types";
-import { Done, Timer, Block } from "@mui/icons-material";
 
 const StatusInputPeminjaman = () => {
   const record = useRecordContext<Peminjaman>();

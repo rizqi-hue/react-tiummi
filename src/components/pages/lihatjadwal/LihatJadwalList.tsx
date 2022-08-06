@@ -1,29 +1,23 @@
-import { useMediaQuery, Theme, Box, Typography, Button } from "@mui/material";
-import {
-  ReferenceInput,
-  AutocompleteInput,
-  Create,
-  TabbedForm,
-  FormTab,
-  SelectInput,
-  TextInput,
-} from "react-admin";
 import SendIcon from "@mui/icons-material/Send";
+import { Box, Button, Typography } from "@mui/material";
+import {
+  AutocompleteInput,
+  Create, FormTab, ReferenceInput, SelectInput, TabbedForm, TextInput
+} from "react-admin";
 
-import Tahun from "./Tahun";
 import { useState } from "react";
 import api from "../../../services/axios";
 
-const OptionRendererRuangan = (choice: any) => (
-  <span className="flex flex-row">
-    <span>{choice.nama}</span>
-    <span className="ml-2 font-bold">({choice.kode})</span>
-  </span>
-);
-const inputTextRuangan = (choice: any) => choice.kode;
-const matchSuggestionRuangan = (filter: any, choice: any) => {
-  return choice.kode.toLowerCase().includes(filter.toLowerCase());
-};
+// const OptionRendererRuangan = (choice: any) => (
+//   <span className="flex flex-row">
+//     <span>{choice.nama}</span>
+//     <span className="ml-2 font-bold">({choice.kode})</span>
+//   </span>
+// );
+// const inputTextRuangan = (choice: any) => choice.kode;
+// const matchSuggestionRuangan = (filter: any, choice: any) => {
+//   return choice.kode.toLowerCase().includes(filter.toLowerCase());
+// };
 
 const OptionRendererKelas = (choice: any) => (
   <span className="flex flex-row">
@@ -46,9 +40,9 @@ const MyToolbar = () => {
 };
 
 export default function JadwalList(props: any) {
-  const isXsmall = useMediaQuery<Theme>((theme) =>
-    theme.breakpoints.down("sm")
-  );
+  // const isXsmall = useMediaQuery<Theme>((theme) =>
+  //   theme.breakpoints.down("sm")
+  // );
   // const isSmall = useMediaQuery<Theme>((theme) => theme.breakpoints.down("md"));
 
   const [kelasKode, setKelasKode] = useState("");

@@ -1,20 +1,8 @@
 import { Box, Typography } from "@mui/material";
 import {
-  useTranslate,
-  SelectInput,
-  Edit,
-  DateInput,
-  ReferenceInput,
-  TabbedForm,
-  FormTab,
-  ArrayInput,
-  SimpleFormIterator,
-  AutocompleteInput,
-  NumberInput,
-  TextInput,
+  AutocompleteInput, Edit, FormTab, ReferenceInput, SelectInput, TabbedForm, TextInput
 } from "react-admin";
 
-import { RichTextInput } from "ra-input-rich-text";
 
 export const validateForm = (
   values: Record<string, any>

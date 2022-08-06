@@ -1,17 +1,8 @@
-import { Grid, InputAdornment } from "@mui/material";
-import {
-  Create,
-  TextInput,
-  TabbedForm,
-  FormTab,
-  FileInput,
-  NumberInput,
-  FileField,
-  ReferenceInput,
-  AutocompleteInput,
-  DateInput,
-} from "react-admin";
+import { Grid } from "@mui/material";
 import { RichTextInput } from "ra-input-rich-text";
+import {
+  AutocompleteInput, Create, DateInput, FileField, FileInput, FormTab, ReferenceInput, TabbedForm, TextInput
+} from "react-admin";
 
 export const validateForm = (
   values: Record<string, any>

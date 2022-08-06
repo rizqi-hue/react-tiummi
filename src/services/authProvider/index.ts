@@ -1,7 +1,6 @@
+import jwtDecode from "jwt-decode";
 import { AuthProvider } from "react-admin";
 import api from "../axios";
-import jwtDecode from "jwt-decode";
-import { CommentsDisabledOutlined } from "@mui/icons-material";
 
 export interface LoginData {
   username: string;

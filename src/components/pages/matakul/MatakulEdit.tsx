@@ -1,9 +1,7 @@
-import { Box} from "@mui/material";
+import { Box } from "@mui/material";
 import {
-  SimpleForm,
-  TextInput,
-  NumberInput,
-  Edit,
+  Edit, NumberInput, SimpleForm,
+  TextInput
 } from "react-admin";
 
 export const validateForm = (

@@ -1,16 +1,6 @@
 import { Box, Typography } from "@mui/material";
 import {
-  useTranslate,
-  SelectInput,
-  Edit,
-  DateInput,
-  ReferenceInput,
-  TabbedForm,
-  FormTab,
-  ArrayInput,
-  SimpleFormIterator,
-  AutocompleteInput,
-  NumberInput,
+  ArrayInput, AutocompleteInput, DateInput, Edit, FormTab, NumberInput, ReferenceInput, SelectInput, SimpleFormIterator, TabbedForm, useTranslate
 } from "react-admin";
 
 import { RichTextInput } from "ra-input-rich-text";

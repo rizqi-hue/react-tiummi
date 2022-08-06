@@ -128,7 +128,6 @@ const MahasiswaCreate = (props: any) => {
 };
 
 const SectionTitle = ({ label }: { label: string }) => {
-  const translate = useTranslate();
 
   return (
     <Typography variant="h6" gutterBottom>

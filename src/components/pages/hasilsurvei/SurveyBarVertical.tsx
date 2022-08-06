@@ -27,7 +27,7 @@ export const options = {
     },
     title: {
       display: true,
-      text: "Chart.js Bar Chart",
+      text: "Hasil Survei",
     },
   },
 };
@@ -61,7 +61,7 @@ export default function SurveyBarVertical(props: ApiTypes) {
       biasa.push(value.nilai3);
       jelek.push(value.nilai4);
     });
-    
+
   const data = {
     labels,
     datasets: [
