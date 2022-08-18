@@ -61,11 +61,10 @@ const Dashboard = () => {
             link="/peminjaman"
           />
         </div>
-        <div className="w-full h-80 flex flex-col md:flex-row justify-between mt-5">
-          <div className="w-full w-max-md md:max-w-xl h-80 mr-5 bg-white p-1 rounded-md shadow">
-            <HasilSurvei />
-          </div>
+        
+        <HasilSurvei />
 
+        <div className="w-full h-80 flex flex-col md:flex-row justify-between mt-5">
           <div className="w-full h-80">
             {/* <HasilSurvei /> */}
             <div className="w-full gap-x-20 text-gray-500">
@@ -98,7 +97,9 @@ const Dashboard = () => {
                                 <div className="font-bold text-xl leading-none">
                                   {value.jumlah}
                                 </div>
-                                <div className="mt-1 text-xs">{value.kategori}</div>
+                                <div className="mt-1 text-xs">
+                                  {value.kategori}
+                                </div>
                               </div>
                             );
                           }

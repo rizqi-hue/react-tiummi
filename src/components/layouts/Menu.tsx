@@ -1,33 +1,33 @@
-import { useState } from "react";
 import Box from "@mui/material/Box";
+import { useState } from "react";
 
 import {
-  useTranslate,
-  DashboardMenuItem,
   MenuItemLink,
   MenuProps,
-  useSidebarState,
   usePermissions,
+  useSidebarState,
 } from "react-admin";
 
-import SubMenu from "./SubMenu";
 import {
-  DriveFileMove,
   Adjust,
   BarChart,
-  Dashboard,
-  CalendarMonth,
-  Inventory,
   Book,
+  CalendarMonth,
+  Chat,
   DashboardOutlined,
+  DriveFileMove,
+  Inventory,
+  Info,
 } from "@mui/icons-material";
+import SubMenu from "./SubMenu";
 
 type MenuName =
   | "menuCatalog"
   | "menuSales"
   | "menuJadwal"
   | "menuInventori"
-  | "menuHome";
+  | "menuHome"
+  | "menuInformasi";
 
 const Menu = ({ dense = false }: MenuProps) => {
   const [state, setState] = useState({
@@ -36,6 +36,7 @@ const Menu = ({ dense = false }: MenuProps) => {
     menuJadwal: false,
     menuInventori: false,
     menuHome: true,
+    menuInformasi: false,
   });
   const [open] = useSidebarState();
   const handleToggle = (menu: MenuName) => {
@@ -67,7 +68,7 @@ const Menu = ({ dense = false }: MenuProps) => {
               dense={dense}
             >
               <MenuItemLink
-                to="/"
+                to="/dashboard"
                 state={{ _scrollToTop: true }}
                 primaryText={"Dashboard"}
                 leftIcon={<Adjust />}
@@ -80,6 +81,23 @@ const Menu = ({ dense = false }: MenuProps) => {
                 leftIcon={<Adjust />}
                 dense={dense}
               />
+            </SubMenu>
+
+            <SubMenu
+              handleToggle={() => handleToggle("menuInformasi")}
+              isOpen={state.menuHome}
+              name="pos.menu.informasi"
+              icon={<Info />}
+              dense={dense}
+            >
+              <MenuItemLink
+                to="/news"
+                state={{ _scrollToTop: true }}
+                primaryText={"Informasi"}
+                leftIcon={<Adjust />}
+                dense={dense}
+              />
+            
             </SubMenu>
 
             <SubMenu
@@ -258,6 +276,14 @@ const Menu = ({ dense = false }: MenuProps) => {
               leftIcon={<Book />}
               dense={dense}
             />
+
+            <MenuItemLink
+              to="/chat"
+              state={{ _scrollToTop: true }}
+              primaryText={"Chat"}
+              leftIcon={<Chat />}
+              dense={dense}
+            />
           </>
         ) : (
           ""
@@ -277,7 +303,7 @@ const Menu = ({ dense = false }: MenuProps) => {
               dense={dense}
             >
               <MenuItemLink
-                to="/"
+                to="/dashboard"
                 state={{ _scrollToTop: true }}
                 primaryText={"Dashboard"}
                 leftIcon={<Adjust />}
@@ -352,6 +378,14 @@ const Menu = ({ dense = false }: MenuProps) => {
               state={{ _scrollToTop: true }}
               primaryText={"Materi"}
               leftIcon={<Book />}
+              dense={dense}
+            />
+
+            <MenuItemLink
+              to="/chat"
+              state={{ _scrollToTop: true }}
+              primaryText={"Chat"}
+              leftIcon={<Chat />}
               dense={dense}
             />
           </>

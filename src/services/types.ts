@@ -77,6 +77,15 @@ export interface Inventori extends RaRecord {
   qty: Number;
 }
 
+export interface Informasi extends RaRecord {
+  title: String;
+  content: String;
+  kategori: String;
+  image: String;
+  type: String;
+  user: String;
+}
+
 export interface Peminjaman extends RaRecord {
   nim: String;
   tgl: Date;

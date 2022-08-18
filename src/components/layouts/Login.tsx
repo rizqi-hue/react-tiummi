@@ -24,6 +24,7 @@ import Box from "@mui/material/Box";
 import { Dashboard } from "../pages/dashboard_login";
 import Welcome from "../pages/dashboard_login/Welcome";
 import JadwalList from "../pages/dashboard_login/LihatJadwalList";
+import { HeaderLogged } from "../../custome_components";
 
 const Login = () => {
   const [loading, setLoading] = useState(false);
@@ -62,6 +63,8 @@ const Login = () => {
   };
 
   return (
+    <>
+    <HeaderLogged />
     <div className="bg-gray-50">
       <div className="h-screen flex flex-col md:flex-row overflow-hidden ">
         <div
@@ -77,7 +80,7 @@ const Login = () => {
           ></div>
           <div className="w-full mx-auto px-2 md:px-20 flex-col mt-10 md:mt-20">
             <div className="block md:hidden">
-              <Welcome />
+              {/* <Welcome /> */}
             </div>
             <div className="flex md:hidden w-full lg:w-1/3 justify-center items-center mt-5 md:mt-1">
               <div className="w-full px-8 justify-center items-center">
@@ -218,6 +221,7 @@ const Login = () => {
         </div>
       </div>
     </div>
+                    </>
   );
 };
 

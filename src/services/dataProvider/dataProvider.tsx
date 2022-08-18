@@ -1,6 +1,7 @@
 import simpleRestProvider from "ra-data-simple-rest";
 import { DataProvider } from "react-admin";
 import addUploadFeature from "./addUploadFeature";
+import axios from "axios";
 
 import api from "../axios";
 
@@ -92,7 +93,20 @@ const addTagsSearchSupport = (dataProvider: DataProvider) => ({
       }
 
       return api.post(resource, form_data).then(
-        (res) => {
+        async (res) => {
+          if (resource == "chat") {
+            await api
+              .post(`${process.env.REACT_APP_WHATSAPP_URL}/send`, params.data)
+              .then(async (res_message) => {
+                if (res_message.data.status == 200) {
+                  form_data.append("id", res.data.data.id);
+                  form_data.append("action", res_message.data.message);
+
+                  await api.post(resource, form_data);
+                }
+              });
+          }
+
           return Promise.resolve({ data: res.data.data });
         },
         (err) => {

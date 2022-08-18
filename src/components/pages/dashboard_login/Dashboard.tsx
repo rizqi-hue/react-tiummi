@@ -34,10 +34,10 @@ const Dashboard = () => {
   return (
     <div className="p-4">
       <div className="hidden md:block">
-        <Welcome />
+        {/* <Welcome /> */}
       </div>
       <div className="items-center justify-center mt-5">
-        <div className="grid grid-cols-1 gap-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2">
+        <div className="grid grid-cols-1 gap-1 sm:grid-cols-1 md:grid-cols-4 lg:grid-cols-4 xl:grid-cols-4">
           <CardCounter
             counter={dataCounter.total_mahasiswa}
             title="Jumlah Mahasiswa"

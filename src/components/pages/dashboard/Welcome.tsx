@@ -1,7 +1,6 @@
 import { Box, Typography } from "@mui/material";
 import { useGetIdentity } from "react-admin";
 
-
 const Welcome = () => {
   const { identity } = useGetIdentity();
   return (
@@ -19,7 +18,7 @@ const Welcome = () => {
         </Typography>
         <Box maxWidth="40em">
           <Typography variant="body1" component="p" gutterBottom>
-            Manajemen Laboratorium Teknik Informatika (Melati)
+            Sistem Informasi Laboratorium Terpadu (SILAT) Prodi Teknik Informatika
           </Typography>
         </Box>
       </Box>

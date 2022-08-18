@@ -60,7 +60,7 @@ const PengajuanEdit = (props: any) => {
             <Poster />
           </div>
           <FileInput
-            source="image"
+            source="imageupdate"
             label="Pilih Gambar yang Sesuai"
             accept="image/png, image/jpeg"
             maxSize={2000000}
@@ -70,7 +70,7 @@ const PengajuanEdit = (props: any) => {
             }
           >
             <ImageField
-              source="image"
+              source="imageupdate"
               title="title"
               sx={{ maxWidth: "10em" }}
             />

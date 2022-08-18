@@ -1,5 +1,5 @@
 import polyglotI18nProvider from "ra-i18n-polyglot";
-import { Admin, Resource } from "react-admin";
+import { Admin, CustomRoutes, Resource } from "react-admin";
 import englishMessages from "./i18n/en";
 
 import { Layout, Login } from "./components/layouts";
@@ -32,10 +32,17 @@ import survei from "./components/pages/survei";
 import tempatikelas from "./components/pages/tempatikelas";
 import user from "./components/pages/user";
 import visitors from "./components/pages/visitors";
+import chat from "./components/pages/chat";
+import news from "./components/pages/informasi";
 
 //provider
 import authProvider from "./services/authProvider";
 import dataProvider from "./services/dataProvider/dataProvider";
+import { Route } from "react-router";
+import { LandingPage } from "./custome_pages/LandindPage";
+import About from "./custome_pages/About";
+import Informasi from "./custome_pages/Informasi";
+import InformasiSingle from "./custome_pages/InformasiSingle";
 
 const i18nProvider = polyglotI18nProvider((locale) => {
   if (locale === "fr") {
@@ -59,9 +66,17 @@ const App = () => (
   >
     {(permissions): any => (
       <>
+        <CustomRoutes noLayout>
+          <Route path="/" element={<LandingPage />} />
+          <Route path="/informasi" element={<Informasi />} />
+          <Route path="/informasi-detail/:slug" element={<InformasiSingle />} />
+          <Route path="/about" element={<About />} />
+        </CustomRoutes>
+
         {permissions ? (
           permissions.includes("superadmin") ? (
             <>
+              <Resource name="dashboard" list={Dashboard} />
               <Resource name="customers" {...visitors} />
               <Resource name="users" {...user} />
               <Resource name="mahasiswa" {...mahasiswa} />
@@ -84,6 +99,8 @@ const App = () => (
               <Resource name="survei" {...survei} />
               <Resource name="hasilsurvei" {...hasilsurvei} />
               <Resource name="lihatjadwal" {...lihatjadwal} />
+              <Resource name="chat" {...chat} />
+              <Resource name="news" {...news} />
             </>
           ) : null
         ) : null}

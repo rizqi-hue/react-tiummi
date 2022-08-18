@@ -42,6 +42,7 @@ const customEnglishMessages: TranslationMessages = {
       jadwal: "Jadwal",
       inventori: "Inventori",
       home: "Home",
+      informasi: "Informasi",
     },
   },
   resources: {

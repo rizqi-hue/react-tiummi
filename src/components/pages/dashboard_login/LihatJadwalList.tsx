@@ -1,13 +1,11 @@
 import SendIcon from "@mui/icons-material/Send";
 import {
-  Autocomplete,
-  Box,
-  Button,
+  Autocomplete, Button,
   FormControl,
   InputLabel,
   MenuItem,
   Select,
-  TextField,
+  TextField
 } from "@mui/material";
 
 import React, { useEffect, useState } from "react";
