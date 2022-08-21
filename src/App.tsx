@@ -20,6 +20,7 @@ import maintenance from "./components/pages/Maintenance";
 import matakul from "./components/pages/matakul";
 import materi from "./components/pages/materi";
 import materimahasiswa from "./components/pages/materimahasiswa";
+import materidosen from "./components/pages/materidosen";
 import peminjaman from "./components/pages/peminjaman";
 import peminjamanmahasiswa from "./components/pages/peminjamanmahasiswa";
 import pengajuan from "./components/pages/pengajuan";
@@ -108,6 +109,7 @@ const App = () => (
         {permissions ? (
           permissions.includes("mahasiswa") ? (
             <>
+              <Resource name="dashboard" list={Dashboard} />
               <Resource name="profile" {...profilemahasiswa} />
               <Resource name="survei" {...survei} />
               <Resource name="lihatjadwal" {...lihatjadwal} />
@@ -118,6 +120,18 @@ const App = () => (
 
               {/* <Resource name="peminjaman" {...peminjaman} /> */}
               {/* <Resource name="pinjamruangan" {...pinjamruangan} /> */}
+            </>
+          ) : null
+        ) : null}
+
+
+        {permissions ? (
+          permissions.includes("dosen") ? (
+            <>
+              <Resource name="dashboard" list={Dashboard} />
+              <Resource name="lihatjadwal" {...lihatjadwal} />
+              <Resource name="materi" {...materidosen} />
+
             </>
           ) : null
         ) : null}

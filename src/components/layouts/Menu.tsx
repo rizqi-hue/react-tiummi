@@ -97,7 +97,6 @@ const Menu = ({ dense = false }: MenuProps) => {
                 leftIcon={<Adjust />}
                 dense={dense}
               />
-            
             </SubMenu>
 
             <SubMenu
@@ -386,6 +385,63 @@ const Menu = ({ dense = false }: MenuProps) => {
               state={{ _scrollToTop: true }}
               primaryText={"Chat"}
               leftIcon={<Chat />}
+              dense={dense}
+            />
+          </>
+        ) : (
+          ""
+        )
+      ) : (
+        ""
+      )}
+
+      {permissions ? (
+        permissions.includes("dosen") ? (
+          <>
+            <SubMenu
+              handleToggle={() => handleToggle("menuHome")}
+              isOpen={state.menuHome}
+              name="pos.menu.home"
+              icon={<DashboardOutlined />}
+              dense={dense}
+            >
+              <MenuItemLink
+                to="/dashboard"
+                state={{ _scrollToTop: true }}
+                primaryText={"Dashboard"}
+                leftIcon={<Adjust />}
+                dense={dense}
+              />
+              <MenuItemLink
+                to="/profile"
+                state={{ _scrollToTop: true }}
+                primaryText={"Profile"}
+                leftIcon={<Adjust />}
+                dense={dense}
+              />
+            </SubMenu>
+
+            <SubMenu
+              handleToggle={() => handleToggle("menuJadwal")}
+              isOpen={state.menuJadwal}
+              name="pos.menu.jadwal"
+              icon={<CalendarMonth />}
+              dense={dense}
+            >
+              <MenuItemLink
+                to="/lihatjadwal"
+                state={{ _scrollToTop: true }}
+                primaryText={"Lihat Jadwal"}
+                leftIcon={<Adjust />}
+                dense={dense}
+              />
+            </SubMenu>
+
+            <MenuItemLink
+              to="/materi"
+              state={{ _scrollToTop: true }}
+              primaryText={"Materi"}
+              leftIcon={<Book />}
               dense={dense}
             />
           </>

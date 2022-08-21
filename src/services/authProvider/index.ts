@@ -45,20 +45,48 @@ const identifier = async () => {
 };
 
 const authProvider: AuthProvider = {
-  login: ({ username, password }) => {
+  login: ({ username, password, status }) => {
     var data = new FormData();
     data.append("email", username);
     data.append("password", password);
 
-    return api.post("/api_admin/authAdmin/login", data).then(
-      (res) => {
-        localStorage.setItem("token_access", res.data.data.token);
-        return Promise.resolve(res.data.data);
-      },
-      (err) => {
-        return Promise.reject(new Error(err.message));
-      }
-    );
+    if (status == "mahasiswa") {
+      return api.post("/api_admin/authAdmin/cek_login_mahasiswa", data).then(
+        (res) => {
+          localStorage.setItem("token_access", res.data.data.token);
+          return Promise.resolve(res.data.data);
+        },
+        (err) => {
+          return Promise.reject(new Error(err.message));
+        }
+      );
+    }
+
+    if (status == "dosen") {
+      return api.post("/api_admin/authAdmin/cek_login_dosen", data).then(
+        (res) => {
+          localStorage.setItem("token_access", res.data.data.token);
+          return Promise.resolve(res.data.data);
+        },
+        (err) => {
+          return Promise.reject(new Error(err.message));
+        }
+      );
+    }
+
+    if (status == "lainnya") {
+      return api.post("/api_admin/authAdmin/cek_login_admin", data).then(
+        (res) => {
+          localStorage.setItem("token_access", res.data.data.token);
+          return Promise.resolve(res.data.data);
+        },
+        (err) => {
+          return Promise.reject(new Error(err.message));
+        }
+      );
+    }
+
+    return Promise.reject("Terjadi Kesalahan");
   },
   logout: () => {
     localStorage.removeItem("token_access");
