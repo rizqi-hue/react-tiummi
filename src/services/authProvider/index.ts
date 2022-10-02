@@ -57,7 +57,7 @@ const authProvider: AuthProvider = {
           return Promise.resolve(res.data.data);
         },
         (err) => {
-          return Promise.reject(new Error(err.message));
+          return Promise.reject(new Error(err.response.data.error.error));
         }
       );
     }
