@@ -1,25 +1,12 @@
-import { Box, Grid, InputAdornment } from "@mui/material";
+import { Grid, InputAdornment } from "@mui/material";
 
 import {
-  Edit,
-  TextInput,
-  TabbedForm,
-  FormTab,
-  FileInput,
-  ImageField,
-  useRecordContext,
-  useCreate,
-  SimpleForm,
-  ListButton,
-  Toolbar,
-  NumberInput,
+  Edit, FileInput, FormTab, ImageField, ListButton, NumberInput, TabbedForm, TextInput, Toolbar
 } from "react-admin";
 
-import { useNavigate } from "react-router-dom";
 
-// import { QRCodeSVG } from "qrcode.react";
-import Poster from "./Poster";
 import { RichTextInput } from "ra-input-rich-text";
+import Poster from "./Poster";
 
 export const validateForm = (
   values: Record<string, any>

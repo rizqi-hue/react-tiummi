@@ -55,7 +55,7 @@ const Card13: FC<Card13Props> = ({
           {data.timestamp}
         </span>
         <div className="mt-auto block">
-          <PostCardMeta fullName={data.user} timestamp={data.timestamp} />
+          <PostCardMeta  timestamp={data.timestamp} />
         </div>
       </div>
 

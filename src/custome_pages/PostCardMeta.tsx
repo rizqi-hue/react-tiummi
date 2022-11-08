@@ -2,6 +2,7 @@ import React, { FC } from "react";
 import { Link } from "react-router-dom";
 // import { _getPersonNameRd } from "contains/fakeData";
 import { Avatar } from "../custome_components";
+import moment from 'moment'
 
 export interface PostCardMetaProps {
   className?: string;
@@ -13,7 +14,7 @@ export interface PostCardMetaProps {
 const PostCardMeta: FC<PostCardMetaProps> = ({
   className = "leading-none",
   hiddenAvatar = false,
-  fullName = "",
+  fullName = "Admin",
   timestamp = "",
 }) => {
   return (
@@ -29,7 +30,7 @@ const PostCardMeta: FC<PostCardMetaProps> = ({
           <Avatar radius="rounded-full" sizeClass={"h-7 w-7 text-sm"} />
         )}
         <span className="block text-neutral-6000 hover:text-black dark:text-neutral-300 dark:hover:text-white font-medium">
-          {/* {fullName} */}
+          {fullName}
         </span>
       </Link>
       <>
@@ -37,7 +38,9 @@ const PostCardMeta: FC<PostCardMetaProps> = ({
           ·
         </span>
         <span className="text-neutral-500 dark:text-neutral-400 font-normal line-clamp-1">
-          {timestamp}
+          {
+            moment(timestamp).format('LL')  
+          }
         </span>
       </>
     </div>

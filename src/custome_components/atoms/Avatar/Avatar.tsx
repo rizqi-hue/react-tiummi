@@ -1,4 +1,5 @@
 import React, { FC } from "react";
+import user from './user.png'
 
 export interface AvatarProps {
   containerClassName?: string;
@@ -14,7 +15,7 @@ const Avatar: FC<AvatarProps> = ({
   containerClassName = "ring-1 ring-white dark:ring-neutral-900",
   sizeClass = "h-6 w-6 text-sm",
   radius = "rounded-full",
-  imgUrl = "",
+  imgUrl = user,
   userName,
   hasChecked,
   hasCheckedClass = "w-4 h-4 bottom-1 -right-0.5",
@@ -23,7 +24,7 @@ const Avatar: FC<AvatarProps> = ({
   const name = userName || "John Doe";
 
   const _setBgColor = (name: string) => {
-    return "#ffdd00";
+    return "#f5f5f5";
   };
 
   return (
@@ -38,7 +39,7 @@ const Avatar: FC<AvatarProps> = ({
           alt={name}
         />
       )}
-      <span className="wil-avatar__name">{name[0]}</span>
+      {/* <span className="wil-avatar__name">{name[0]}</span> */}
 
       {/* {hasChecked && (
         <span className={`  text-white  absolute  ${hasCheckedClass}`}>

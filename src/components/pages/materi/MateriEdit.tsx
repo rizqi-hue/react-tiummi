@@ -26,10 +26,6 @@ export const validateForm = (
     errors.tgl = "ra.validation.required";
   }
 
-  if (!values.kategori) {
-    errors.kategori = "ra.validation.required";
-  }
-
   return errors;
 };
 
@@ -64,14 +60,14 @@ const MateriEdit = (props: any) => {
           <Poster />
           </>
           <FileInput
-            source="image"
+            source="imageupdate"
             label="Pilih file yang Sesuai"
             // accept="image/png, image/jpeg"
             maxSize={2000000}
             multiple={true}
             placeholder={<p>Letakan file disini</p>}
           >
-            <FileField source="image" title="title" sx={{ maxWidth: "10em" }} />
+            <FileField source="imageupdate" title="title" sx={{ maxWidth: "10em" }} />
           </FileInput>
         </FormTab>
         <FormTab

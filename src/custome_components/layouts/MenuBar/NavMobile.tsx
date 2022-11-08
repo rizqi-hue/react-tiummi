@@ -37,11 +37,11 @@ const NavMobile: React.FC<NavMobileProps> = ({ data = [], onClickClose }) => {
           </span>
         </NavLink>
       </Disclosure>
-       <Disclosure
-       key={"2"}
-       as="li"
-       className="text-neutral-900 dark:text-white"
-     >
+      <Disclosure
+        key={"2"}
+        as="li"
+        className="text-neutral-900 dark:text-white"
+      >
        <NavLink
          className="flex w-full items-center py-2.5 px-4 font-medium uppercase tracking-wide text-sm hover:bg-neutral-100 dark:hover:bg-neutral-800 rounded-lg"
          to={"/informasi"}
@@ -53,24 +53,41 @@ const NavMobile: React.FC<NavMobileProps> = ({ data = [], onClickClose }) => {
            Informasi
          </span>
        </NavLink>
-     </Disclosure>
+      </Disclosure>
       <Disclosure
-      key={"3"}
-      as="li"
-      className="text-neutral-900 dark:text-white"
-    >
-      <NavLink
-        className="flex w-full items-center py-2.5 px-4 font-medium uppercase tracking-wide text-sm hover:bg-neutral-100 dark:hover:bg-neutral-800 rounded-lg"
-        to={"/about"}
-        // activeClassName="text-secondary"
+        key={"3"}
+        as="li"
+        className="text-neutral-900 dark:text-white"
       >
-        <span
-          className={"block w-full"}
+        <NavLink
+          className="flex w-full items-center py-2.5 px-4 font-medium uppercase tracking-wide text-sm hover:bg-neutral-100 dark:hover:bg-neutral-800 rounded-lg"
+          to={"/berkas"}
+          // activeClassName="text-secondary"
         >
-          Tentang Lab
-        </span>
-      </NavLink>
-    </Disclosure>
+          <span
+            className={"block w-full"}
+          >
+            Materi
+          </span>
+        </NavLink>
+      </Disclosure>
+      <Disclosure
+        key={"4"}
+        as="li"
+        className="text-neutral-900 dark:text-white"
+      >
+        <NavLink
+          className="flex w-full items-center py-2.5 px-4 font-medium uppercase tracking-wide text-sm hover:bg-neutral-100 dark:hover:bg-neutral-800 rounded-lg"
+          to={"/about"}
+          // activeClassName="text-secondary"
+        >
+          <span
+            className={"block w-full"}
+          >
+            Tentang Lab
+          </span>
+        </NavLink>
+      </Disclosure>
     </>
     );
   };

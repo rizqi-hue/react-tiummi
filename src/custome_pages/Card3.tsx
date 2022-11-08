@@ -51,12 +51,12 @@ const Card3: FC<Card3Props> = ({
               </Link>
             </h2>
             <div className="block sm:mt-2">
-              <span className="text-neutral-500 dark:text-neutral-400 text-base line-clamp-1">
+              <span className="text-neutral-500 dark:text-neutral-400 text-base line-clamp-3">
                 <div dangerouslySetInnerHTML={{ __html: data.content || "" }} />
               </span>
             </div>
           </div>
-          <PostCardMeta fullName={data.user} timestamp={data.timestamp} />
+          <PostCardMeta timestamp={data.timestamp} />
         </div>
       </div>
 
@@ -64,7 +64,7 @@ const Card3: FC<Card3Props> = ({
         className={`block flex-shrink-0 sm:w-56 sm:ml-6 rounded-3xl overflow-hidden mb-5 sm:mb-0`}
       >
         <Link
-          to={"/blog-single"}
+          to={`/informasi-detail/${data.slug}`}
           className={`block w-full h-0 aspect-h-9 sm:aspect-h-16 aspect-w-16 `}
         >
           <NcImage

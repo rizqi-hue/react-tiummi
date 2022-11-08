@@ -28,6 +28,7 @@
     "glidejs": "^2.1.0",
     "jsonwebtoken": "^8.5.1",
     "jwt-decode": "^3.1.2",
+    "moment": "^2.29.4",
     "prop-types": "^15.8.1",
     "qrcode.react": "^3.0.1",
     "ra-data-json-server": "^4.0.0",
@@ -39,6 +40,7 @@
     "react-admin": "^4.0.1",
     "react-chartjs-2": "^4.2.0",
     "react-dom": "^18.0.0",
+    "react-helmet": "^6.1.0",
     "react-pdf": "^5.7.2",
     "react-redux": "^8.0.1",
     "react-router": "^6.3.0",
@@ -78,6 +80,6 @@
     "@types/glidejs__glide": "^3.4.2",
     "autoprefixer": "^10.4.5",
     "postcss": "^8.4.12",
-    "tailwindcss": "^3.0.24"
+    "tailwindcss": "^3.2.2"
   }
 }

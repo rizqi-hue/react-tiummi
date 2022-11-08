@@ -66,7 +66,7 @@ const Card12: FC<Card12Props> = ({
         </span>
         <PostCardMeta
           className="mt-5"
-          fullName={data.user}
+        
           timestamp={data.timestamp}
         />
       </div>

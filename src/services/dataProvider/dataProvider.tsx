@@ -174,7 +174,7 @@ const addTagsSearchSupport = (dataProvider: DataProvider) => ({
           return Promise.reject(new Error(err.message));
         }
       );
-    }
+    } 
 
     const newPictures = params.data.imageupdate.filter(
       (p: any) => p.rawFile instanceof File

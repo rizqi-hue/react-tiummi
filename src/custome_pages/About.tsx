@@ -38,7 +38,7 @@ const About: FC<PageAboutProps> = ({ className = "" }) => {
             <SectionStatistic />
             <div className="container flex-shrink-0 grid grid-cols-1 md:grid-cols-2 ">
               <div className="max-w-sm space-y-8">
-                {info.map((item, index) => (
+                {/* {info.map((item, index) => (
                   <div key={index}>
                     <h3 className="uppercase font-semibold text-sm dark:text-neutral-200 tracking-wider">
                       {item.title}
@@ -47,7 +47,7 @@ const About: FC<PageAboutProps> = ({ className = "" }) => {
                       {item.desc}
                     </span>
                   </div>
-                ))}
+                ))} */}
                 <div></div>
               </div>
             </div>

@@ -35,9 +35,9 @@ export interface SectionStatisticProps {
 const SectionStatistic: FC<SectionStatisticProps> = ({ className = "" }) => {
   return (
     <div className={`nc-SectionStatistic relative ${className}`}>
-      <Heading>🚀 Silat</Heading>
-      <div className="text-2xl ml-14">Sistem Informasi Laboratorium Terpadu</div>
-      <div className="text-2xl ml-14 mb-8">Prodi Teknik Informatika</div>
+      <Heading>Silat</Heading>
+      <div className="text-2xl ">Sistem Informasi Laboratorium Terpadu</div>
+      <div className="text-2xl  mb-8">Prodi Teknik Informatika</div>
 
       <Dashboard />
 

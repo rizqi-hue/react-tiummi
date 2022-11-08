@@ -44,6 +44,7 @@ import { LandingPage } from "./custome_pages/LandindPage";
 import About from "./custome_pages/About";
 import Informasi from "./custome_pages/Informasi";
 import InformasiSingle from "./custome_pages/InformasiSingle";
+import PageMateri from "./custome_pages/materi/PageMateri";
 
 const i18nProvider = polyglotI18nProvider((locale) => {
   if (locale === "fr") {
@@ -72,6 +73,7 @@ const App = () => (
           <Route path="/informasi" element={<Informasi />} />
           <Route path="/informasi-detail/:slug" element={<InformasiSingle />} />
           <Route path="/about" element={<About />} />
+          <Route path="/berkas" element={<PageMateri />} />
         </CustomRoutes>
 
         {permissions ? (

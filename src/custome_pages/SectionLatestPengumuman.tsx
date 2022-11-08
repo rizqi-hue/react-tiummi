@@ -34,7 +34,7 @@ const SectionLatestPengumuman: FC<SectionLatestPengumumanProps> = ({
     <div className={`nc-SectionLatestPengumuman relative ${className}`}>
       <div className="flex flex-col lg:flex-row">
         <div className="w-full lg:w-3/5 xl:w-2/3 xl:pr-14">
-          <Heading>Pengumuman Terbaru 🎈</Heading>
+          <Heading>Pengumuman Terbaru</Heading>
           <div className={`grid gap-6 md:gap-8 grid-cols-1`}>
             {data.map((item, index) => (
               <Card3 data={item} key={index} className="" />

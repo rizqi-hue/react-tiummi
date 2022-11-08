@@ -60,11 +60,11 @@ const LoadedGridList = () => {
           })}
         >
           {record.image != "" && record.image != null ? (
-            <div className="h-full rounded-xl w-full">
+            <div className="h-full rounded-xl w-full ">
               <img
                 src={`${process.env.REACT_APP_DATA_PROVIDER}/${record.image}`}
                 alt=""
-                className="rounded-xl"
+                className="rounded-xl object-cover w-full h-full"
               />
             </div>
           ) : (
